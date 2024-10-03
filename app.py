@@ -6,8 +6,8 @@ from email.mime.text import MIMEText
 import random
 import razorpay
 import os
-RAZORPAY_KEY_ID = 'rzp_test_NlIGIFpas2ADNs'
-RAZORPAY_KEY_SECRET = 'HYPm7RZ9X5Al5S6DpJvHDBsc'
+RAZORPAY_KEY_ID = 'rzp_test_DOvsPQfdskWqCp'
+RAZORPAY_KEY_SECRET = 'iH7veu2Hq5cG8mbMLrsNDhWF'
 client = razorpay.Client(auth=(RAZORPAY_KEY_ID,RAZORPAY_KEY_SECRET))
 user=os.environ.get('RDS_USERNAME')
 db=os.environ.get('RDS_DB_NAME')
@@ -127,9 +127,9 @@ def sendotp():
         mobile = request.form['mobile']
         smtp_server = "smtp.gmail.com"
         smtp_port = 587
-        mailusername = "saivardhan.thimmisetty@gmail.com"
-        mailpassword = "xqmd vmwz ibqy ijii"
-        from_email = "saivardhan.thimmisetty@gmail.com"
+        mailusername = "saimst001@gmail.com"
+        mailpassword = "abhi xadx wrcp dokm"
+        from_email = "saimst001@gmail.com"
         to_email = mailid
         subject = "OTP FOR VERIFICATION"
         body = f"The OTP for Verification is {verifyotp}"

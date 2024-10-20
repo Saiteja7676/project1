@@ -6,8 +6,8 @@ from email.mime.text import MIMEText
 import random
 import razorpay
 import os
-RAZORPAY_KEY_ID = 'rzp_test_DOvsPQfdskWqCp'
-RAZORPAY_KEY_SECRET = 'iH7veu2Hq5cG8mbMLrsNDhWF'
+RAZORPAY_KEY_ID = 'rzp_test_M0DZ3YYJlyWymj'
+RAZORPAY_KEY_SECRET = 'i2w46zGUdoPhqpKLJJHwZXN2'
 client = razorpay.Client(auth=(RAZORPAY_KEY_ID,RAZORPAY_KEY_SECRET))
 user=os.environ.get('RDS_USERNAME')
 db=os.environ.get('RDS_DB_NAME')
@@ -21,14 +21,14 @@ with pymysql.connect(host=host,password=password,db=db,user=user,port=port) as c
     cursor.execute("INSERT INTO users VALUES ('SAI VARDHAN','THIMMISETTY','saivardhan2408@gmail.com','7893570611')")
     cursor.execute("CREATE TABLE if not exists cart ( PID varchar(10) DEFAULT NULL, PNAME varchar(30) DEFAULT NULL, EMAIL varchar(100) DEFAULT NULL, PPRICE varchar(30) DEFAULT NULL, QTY varchar(100) DEFAULT NULL) ")
 verifyotp = "0"
-# '''
-# db_config = {
-#     'host' : 'localhost',
-#     'database' : 'projectflask',
-#     'user' : 'root',
-#     'password' : 'root'
-# }
-# '''
+'''
+db_config = {
+    'host' : 'localhost',
+    'database' : 'projectflask',
+    'user' : 'root',
+    'password' : 'root'
+}
+'''
 db_config = {
     'host' : host,
     'user' : user,
